@@ -13,6 +13,8 @@ const NewExpense = (props) => {
         props.onAddExpense(expenseData);
     };
 
+    
+
 
     return (
         <div className="new-expense">
