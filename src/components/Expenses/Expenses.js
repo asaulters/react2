@@ -8,8 +8,29 @@ import './Expenses.css';
 const Expenses = (props) => {
   const [filteredYear, setFilteredYear] = useState('2020');
 
+//   const filteredYearConditional = (filteredYear) => {
+//       if (filteredYear == '2019'){
+//           console.log('2019');
+//           const filteredArr = props.expenses.filter(expense => expense.item.date == "2019")
+//           console.log(filteredArr);
+//       } else if (filteredYear == '2020'){
+//           console.log('2020');
+//           const filteredArr = props.expenses.filter(expense => expense.item.date == "2020")
+//           console.log(filteredArr);
+//       } else if (filteredYear == '2021'){
+//         console.log('2021');
+//         const filteredArr = props.expenses.filter(expense => expense.item.date == "2021")
+//         console.log(filteredArr);
+//     } else {
+//         console.log('2022')
+//         const filteredArr = props.expenses.filter(expense => expense.item.date == "2022")
+//         console.log(filteredArr);
+//     }
+//   }
+
   const filterChangeHandler = (selectedYear) => {
     setFilteredYear(selectedYear);
+    <ExpensesFilter filteredYearConditional={selectedYear} />
   };
 
   return (
