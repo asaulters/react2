@@ -5,18 +5,19 @@ import './ExpensesFilter.css';
 const ExpensesFilter = (props) => {
   const dropdownChangeHandler = (event) => {
     props.onChangeFilter(event.target.value);
+    filteredYearConditional(event);
   };
 
-  const filteredYearConditional = (filteredYear) => {
-    if (filteredYear == '2019'){
+  const filteredYearConditional = (e) => {
+    if (e.target.value === '2019'){
         console.log('2019');
         const filteredArr = props.expenses.filter(expense => expense.item.date == "2019")
         console.log(filteredArr);
-    } else if (filteredYear == '2020'){
+    } else if (e.target.value === '2020'){
         console.log('2020');
         const filteredArr = props.expenses.filter(expense => expense.item.date == "2020")
         console.log(filteredArr);
-    } else if (filteredYear == '2021'){
+    } else if (e.target.value === '2021'){
       console.log('2021');
       const filteredArr = props.expenses.filter(expense => expense.item.date == "2021")
       console.log(filteredArr);
