@@ -1,32 +1,33 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import './ExpensesFilter.css';
 
 const ExpensesFilter = (props) => {
   const dropdownChangeHandler = (event) => {
     props.onChangeFilter(event.target.value);
-    filteredYearConditional(event);
+    
   };
 
-  const filteredYearConditional = (e) => {
-    if (e.target.value === '2019'){
-        console.log('2019');
-        const filteredArr = props.expenses.filter(expense => expense.item.date == "2019")
-        console.log(filteredArr);
-    } else if (e.target.value === '2020'){
-        console.log('2020');
-        const filteredArr = props.expenses.filter(expense => expense.item.date == "2020")
-        console.log(filteredArr);
-    } else if (e.target.value === '2021'){
-      console.log('2021');
-      const filteredArr = props.expenses.filter(expense => expense.item.date == "2021")
-      console.log(filteredArr);
-  } else {
-      console.log('2022')
-      const filteredArr = props.expenses.filter(expense => expense.item.date == "2022")
-      console.log(filteredArr);
-  }
-}
+//   const filteredYearConditional = (e) => {
+//     // const [selectedYearFilter, setSelectedYearFilter] = useState('2022');
+//     if (e.target.value === '2019'){
+//         console.log('2019');
+//         const filteredArr = props.expenses.filter(expense => expense.item.date == "2019")
+//         console.log(filteredArr);
+//     } else if (e.target.value === '2020'){
+//         console.log('2020');
+//         const filteredArr = props.expenses.filter(expense => expense.item.date == "2020")
+//         console.log(filteredArr);
+//     } else if (e.target.value === '2021'){
+//       console.log('2021');
+//       const filteredArr = props.expenses.filter(expense => expense.item.date == "2021")
+//       console.log(filteredArr);
+//   } else {
+//       console.log('2022')
+//       const filteredArr = props.expenses.filter(expense => expense.item.date == "2022")
+//       console.log(filteredArr);
+//   }
+// }
 
   return (
     <div className='expenses-filter'>
