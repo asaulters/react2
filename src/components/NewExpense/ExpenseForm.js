@@ -54,6 +54,8 @@ const ExpenseForm = (props) => {
     setEnteredDate('');
   };
 
+  
+
   const addExpenseFormButton = (e) => {
     e.preventDefault();
     return (
